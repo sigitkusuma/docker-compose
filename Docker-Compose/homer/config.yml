@@ -7,9 +7,9 @@
 # externalConfig: https://example.com/server-luci/config.yaml
 
 title: "Geekshift App dashboard"
-subtitle: "Homer"
+subtitle: "Homelab Server"
 # documentTitle: "Welcome" # Customize the browser tab text
-logo: "assets/logo.png"
+#logo: "https://lh3.googleusercontent.com/pw/AIL4fc9If0R9id24hBhqUDHKtW4SgRk0mIyEeQRUE20vFgLMDqTOI0CCKuCuKPd4WpPRNGOSI6G7wT_PQmdrKZQmAxJ96lCv4L8GgP5DFNIfROUzaySxhXdxvyw4AVm_VcukB2bJwQOWO9RwfH1vdL-QaImCr8qejuNZ3CBelsve1nDPwnCbtuPAYb6Njc0XZ_F8sptCIJ_mIwFmWXR8ph_swwBCizY4DTbLAn33sYym3TymkmoLmnTFPN7ugtejhJQGAWJ5ZKxLXgf2KduYN6AOYAkHEmdQ_GpOH2xxGJ8-2PKg_2Jn_loGmkvusGLERAR51cBeXtJWVTvCszzW1eWpuR_Rsb2mHMlooBFaPRniNTqtCuOqUN8ntC3eKwmETEuMb-oGPZZ76bhwkQ30_skPeg6KGhcNIdMMA7vbUBWm1I-nhdv-N-ctsLlrZRfD3SxAZYwXnsvvXfyZDU4FCw1kVs3Eavcx-5LM5SZ9PezUsUDGSvYa4brxgEaGZ1ac3BNVFFpXD_1n89O1VlLL4av-6k2BEywICoo_DM5r8WJp8JLrLwUPkeZ4-xsNupZylja4JGO-c6EHxDjCsyzfRHTifsZlNb1Hx7kEKlPnp1G59ZHO_YsrdSq-W1O4qcG3aBfRhDilkP77ENugE5eCKdrIjXrI7lEEgcMRaZJ7Z952JXMimfvl-YIoGnI0Ps_qyiwl3dFag1SwTYQ9V43829QuL3fvUyNQoUHKI3Ta4BwdDWP_cDwuPj5bZEAYHZ3nP15XGkFDcL1XU_Wd-lK9ZX6RwjLYNXNA-4n-MRcq1syN2DDZyf9o7jQowEHdr8qd8iHHQhDKorHRTie7HPKl_miwDNf1wi8YpbB7VGlsRWwBX94OCPLYvQAjdpAGkyBf9KkKlhqRFmVPoI7ZNpqmOzu8m7U=w1920-h864-s-no?authuser=0"
 # Alternatively a fa icon can be provided:
 # icon: "fas fa-skull-crossbones"
 
@@ -45,8 +45,8 @@ theme: default # 'default' or one of the themes available in 'src/assets/themes'
 # if you want to change only some of the colors, feel free to remove all unused key.
 colors:
   light:
-    highlight-primary: "#3367d6"
-    highlight-secondary: "#4285f4"
+    highlight-primary: "#4285f4"
+    highlight-secondary: "#BEDCFF"
     highlight-hover: "#5a95f5"
     background: "#f5f5f5"
     card-background: "#ffffff"
@@ -88,25 +88,25 @@ message:
   #   content: 'value'
   # refreshInterval: 10000
   style: "is-warning"
-  title: "Optional message!"
+  title: "Build with Open Sources"
   icon: "fa fa-exclamation-triangle"
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  content: "We ❤️ Open Sources "
 
 # Optional navbar
 # links: [] # Allows for navbar (dark mode, layout, and search) without any links
 links:
-  - name: "Github Source"
+  - name: "Github"
     icon: "fab fa-github"
     url: "https://github.com/sigitkusuma"
-    target: "_blank" # optional html tag target attribute
-  - name: "link 2"
-    icon: "fas fa-book"
-    url: "https://github.com/bastienwirtz/homer"
+    #target: "_blank" # optional html tag target attribute
+  - name: "Instagram"
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png"
+    url: "https://www.instagram.com/geek.shift"
   # this will link to a second homer page that will load config from page2.yml and keep default config values as in config.yml file
   # see url field and assets/page.yml used in this example:
-  - name: "Second Page"
-    icon: "fas fa-file-alt"
-    url: "#page2"
+  - name: "Fiverr"
+    icon: "https://cdn-images-1.medium.com/max/1200/1*Xa26ULIpZTTP1hN_ReUXVQ.png"
+    url: "https://www.fiverr.com/sigitkusuma606"
 
 # Services
 # First level array represents a group.
@@ -126,15 +126,16 @@ services:
         keywords: "self hosted storage server" # optional keyword used for searching purpose
         url: "https://cloud.geekshift.site/"
         target: "_blank" # optional html tag target attribute
-      - name: "Nginx Proxy"
-        logo: "https://nginxproxymanager.com/icon.png"
-        subtitle: "Another application"
+      
+      - name: "Plex Media"
+        logo: "https://www.nvidia.com/content/dam/en-zz/Solutions/SHIELD/support/shield-tv-pro/plex-logo.gif"
+        subtitle: "Movie Streaming"
         tag: "app"
         # Optional tagstyle
         tagstyle: "is-success"
-        url: "https://proxy.geekshift.site/"
-        
-  - name: "Other group"
+        url: "https://media.geekshift.site/"
+
+  - name: "Network Apps"
     icon: "fas fa-heartbeat"
     items:
       - name: "Pi-hole"
@@ -146,3 +147,19 @@ services:
         target: "_blank" # optional html a tag target attribute
         # class: "green" # optional custom CSS class for card, useful with custom stylesheet
         # background: red # optional color for card to set color directly without custom stylesheet
+
+      - name: "Nginx Proxy"
+        logo: "https://nginxproxymanager.com/icon.png"
+        subtitle: "Proxy Manager"
+        tag: "app"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "https://proxy.geekshift.site/"
+
+      - name: "Portainer"
+        logo: "https://marketplace-assets.digitalocean.com/logos/portaineriolimit-portainercommuni.svg"
+        subtitle: "Docker Home"
+        tag: "app"
+        # Optional tagstyle
+        tagstyle: "is-success"
+        url: "https://portainer.geekshift.site/"
