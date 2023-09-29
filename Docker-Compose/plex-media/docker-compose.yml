@@ -1,0 +1,32 @@
+version: "2.1"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    environment:
+      - PUID=1001
+      - PGID=1001
+      - TZ=Indonesia/Jakarta
+      - VERSION=docker
+      - PLEX_CLAIM= #your_plex_claim
+    ports:
+      - 32400:32400
+      - 3005:3005
+      - 8324:8324
+      - 32469:32469
+      - 1900:1900
+      - 32410:32410
+      - 32412:32412
+      - 32413:32413
+      - 32414:32414
+    volumes:
+      - /plex/config:/config
+      - /plex/TV:/tv
+      - /plex/Movies:/movies
+      - /plex/Music:/music
+    restart: unless-stopped
+    
+networks:
+  default:
+    external: true
+    name: nginx-proxy-manager_default
