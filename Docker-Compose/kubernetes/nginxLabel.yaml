@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-with-label
+  labels:
+    team: dev
+    version: v2
+    environtment: production
+spec:
+  containers:
+    - name: web-server
+      image: nginx:latest
+      ports:
+        - containerPort: 80
