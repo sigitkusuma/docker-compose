@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@astrolib/seo": "^1.0.0-beta.5"
+  }
+}
